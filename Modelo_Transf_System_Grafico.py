@@ -11,6 +11,11 @@ def func2():
     lbl.setText("conectando a nova fonte 2!")
     lbl.adjustSize()
 
+def func3():
+    vlr_lido = le.text()
+    lbl.setText(vlr_lido)
+    lbl.adjustSize()
+
 
 
 app = QApplication(sys.argv)
@@ -33,8 +38,18 @@ btn1.setStyleSheet('background-color:Grey;color:black')
 btn1.clicked.connect(func2)
 
 
+btn2 = QPushButton("Botão 3", janela)
+btn2.setGeometry(100,220,140,50)
+btn2.setStyleSheet('background-color:Grey;color:black')
+btn2.clicked.connect(func3)
+
+
 lbl = QLabel("digite o seu usuario", janela)
 lbl.move(300,120)
+
+le = QLineEdit("", janela)
+le.setGeometry(300,220,140,50)
+
 
 janela.show()
 
