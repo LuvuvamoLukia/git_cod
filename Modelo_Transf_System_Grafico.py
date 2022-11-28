@@ -25,26 +25,27 @@ app = QApplication(sys.argv)
 janela = QWidget()
 janela.resize(800,800)
 janela.setWindowTitle("Lukia Transfer System")
+janela.setStyleSheet('background-color:DarkRed')
 janela.adjustSize()
 
-btn = QPushButton("Botão 1", janela)
+btn = QPushButton("Acessar", janela)
 btn.setGeometry(100,100,140,50)
-btn.setStyleSheet('background-color:Grey;color:black')
+btn.setStyleSheet('background-color:GhostWhite;color:black')
 btn.clicked.connect(func1)
 
-btn1 = QPushButton("Botão 2", janela)
+btn1 = QPushButton("Cadastrar 2", janela)
 btn1.setGeometry(100,160,140,50)
-btn1.setStyleSheet('background-color:Grey;color:black')
+btn1.setStyleSheet('background-color:GhostWhite;color:black')
 btn1.clicked.connect(func2)
 
 
 btn2 = QPushButton("Botão 3", janela)
 btn2.setGeometry(100,220,140,50)
-btn2.setStyleSheet('background-color:Grey;color:black')
+btn2.setStyleSheet('background-color:GhostWhite;color:black')
 btn2.clicked.connect(func3)
 
 
-lbl = QLabel("digite o seu usuario", janela)
+lbl = QLabel("digite o seu usuario e senha !", janela)
 lbl.move(300,120)
 
 le = QLineEdit("", janela)
