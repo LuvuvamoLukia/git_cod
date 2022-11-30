@@ -36,6 +36,11 @@ lbl1 = QLabel("todos direitos reservados@Lukia Comercio e Servicos", janela)
 lbl1.move(360,600)
 lbl1.setStyleSheet('color:GhostWhite;font-size:20px')
 
+
+le = QLineEdit("", janela)
+le.setGeometry(300,220,140,50)
+le.get()
+
 usuario = 'blaise_joao@gmail.com'
 senha = 'BlaiseJS@'
 
