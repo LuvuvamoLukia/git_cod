@@ -1,5 +1,8 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QLayout, QLineEdit
+import mysql.connector
+from datetime import date
+from PyQt6.QtCore import QSize, Qt
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QLayout, QLineEdit , QMainWindow
 
 
 
@@ -22,37 +25,39 @@ app = QApplication(sys.argv)
 
 
 
-janela = QWidget()
-janela.resize(800,800)
-janela.setWindowTitle("Lukia Transfer System")
-janela.setStyleSheet('background-color:DarkRed')
-janela.adjustSize()
+janela1 = QWidget()
+janela1.resize(2100,800)
+janela1.setWindowTitle("Lukia Transfer System")
+janela1.setStyleSheet('background-color:DarkRed')
+janela1.adjustSize()
 
-btn = QPushButton("Acessar", janela)
-btn.setGeometry(100,100,140,50)
-btn.setStyleSheet('background-color:GhostWhite;color:black')
-btn.clicked.connect(func1)
+btn0 = QPushButton("Acessar", janela1)
+btn0.setGeometry(100,100,140,50)
+btn0.setStyleSheet('background-color:GhostWhite;color:black;font-size:30px')
+btn0.clicked.connect(func1)
 
-btn1 = QPushButton("Cadastrar 2", janela)
-btn1.setGeometry(100,160,140,50)
-btn1.setStyleSheet('background-color:GhostWhite;color:black')
-btn1.clicked.connect(func2)
-
-
-btn2 = QPushButton("Botão 3", janela)
-btn2.setGeometry(100,220,140,50)
-btn2.setStyleSheet('background-color:GhostWhite;color:black')
-btn2.clicked.connect(func3)
+btn01 = QPushButton("Cadastrar 2", janela1)
+btn01.setGeometry(100,160,140,50)
+btn01.setStyleSheet('background-color:GhostWhite;color:black')
+btn01.clicked.connect(func2)
 
 
-lbl = QLabel("digite o seu usuario e senha !", janela)
+btn02 = QPushButton("Botão 3", janela1)
+btn02.setGeometry(100,220,140,50)
+btn02.setStyleSheet('background-color:GhostWhite;color:black')
+btn02.clicked.connect(func3)
+
+
+
+lbl = QLabel("digite o seu usuario e senha !", janela1)
 lbl.move(300,120)
+lbl.setStyleSheet('color:GhostWhite')
 
-le = QLineEdit("", janela)
+le = QLineEdit("", janela1)
 le.setGeometry(300,220,140,50)
 
 
-janela.show()
+janela1.show()
 
 app.exec()
 
